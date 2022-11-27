@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Table</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
 </head>
+
 <body>
+  <div class="container">
+    <h1>SEARCH THE TABLE CONTENT</h1>
     <input type="text" id="myinput" placeholder="search companies" onkeyup="searchfun()">
 
     <table id="mytable" border="1">
-        <tr>
-          <th class="space">Company</th>
-          <th >Contact</th>
-          <th>Country</th>
-        </tr>
-        <tr>
-          <td class="space">Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td class="space"> Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td class="space">Centro </td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td class="space">comercia </td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td class="space">ial </td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td class="space">merci </td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td class="space">omer </td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-      </table>
-      <script>
-        const searchfun = () =>{
-            let filter = document.getElementById('myinput').value.toUpperCase();
-            let mytable = document.getElementById('mytable');
-            let tr = mytable.getElementsByTagName('tr');
-
-            for( var i = 0;i<tr.length;i++){
-                let td = tr[i].getElementsByTagName('td')[0];
-                if(td){
-                  let textvalue = td.textContent || td.innerHTML;
-                  if(textvalue.toUpperCase().indexOf(filter)>-1){
-                    tr[i].style.display = "";
-                }
-                else{
-                   tr[i].style.display = "none";
-                }
-                }
-            }
-        }
-      </script>
+      <tr>
+        <th class="space">Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td class="space">Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td class="space"> Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td class="space">Centro </td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td class="space">comercia </td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td class="space">ial </td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td class="space">merci </td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td class="space">omer </td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+    </table>
+  </div>
 </body>
+
 </html>
